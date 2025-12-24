@@ -9,76 +9,86 @@ pinned: false
 
 # Shah's AI World
 
-A collection of AI-powered toy applications built with Streamlit.
+Your personal AI playground - a collection of powerful, interactive AI applications that bring cutting-edge AI capabilities to your fingertips. No complex setup, no coding required - just pure AI magic!
 
-## Features
+## What's Inside?
 
-- Multi-page Streamlit application
-- Interactive AI demos
-- Easy navigation through sidebar
-- Responsive design
+### 💬 AI Chatbot
+Chat with state-of-the-art language models! Choose from multiple AI providers including DeepSeek, Google Gemini, and Claude. Features streaming responses, conversation history, and a clean chat interface.
+
+### 📊 Software Diagram Generator
+Transform your ideas into professional diagrams instantly! Describe your software architecture, database schema, or workflow in plain English, and watch as AI generates beautiful Mermaid diagrams. Perfect for:
+- System architecture diagrams
+- Sequence diagrams
+- Flowcharts & ERDs
+- Class diagrams
+
+### 🎭 Personality Bot
+Experience AI with character! Choose from 5 distinct personalities:
+- **🎩 Professional Business Assistant** - Your corporate ally
+- **✨ Creative Writing Helper** - Unleash your imagination
+- **💻 Technical Expert** - Code & debug like a pro
+- **🤗 Friendly Companion** - A warm chat buddy
+- **🎓 Academic Scholar** - Research & learn
+
+Each personality adapts its communication style, expertise, and responses to match your needs.
+
+## Tech Stack
+
+- **Frontend**: Streamlit
+- **AI Integration**: OpenRouter API (access to multiple LLM providers)
+- **Diagram Rendering**: Mermaid.js via streamlit-mermaid
+- **Deployment**: Docker + Hugging Face Spaces
+
+## Quick Start
+
+### Live Demo
+Visit the live app: [Shah's AI World on Hugging Face](https://huggingface.co/spaces/shaishavnshah/shah-toy-apps)
+
+### Run Locally
+
+1. Clone the repository:
+```bash
+git clone https://github.com/shaishav1010/ai-toy-apps.git
+cd ai-toy-apps
+```
+
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+3. Run the app:
+```bash
+streamlit run "0_🏠_Home.py"
+```
+
+4. Open `http://localhost:8501` in your browser
+
+### Get an API Key
+All apps use OpenRouter for AI capabilities. Get your free API key at [openrouter.ai/keys](https://openrouter.ai/keys)
 
 ## Project Structure
 
 ```
 ai-toy-apps/
-├── 0_🏠_Home.py              # Main entry point (Home page)
-├── pages/                     # Additional pages
-│   ├── 1_🤖_AI_Chatbot.py
-│   └── 2_🎨_Image_Generator.py
-├── requirements.txt           # Python dependencies
-├── Dockerfile                 # For Docker/Hugging Face deployment
-└── .streamlit/               # Streamlit configuration
-    └── config.toml
+├── 0_🏠_Home.py                    # Welcome page
+├── pages/
+│   ├── 1_🤖_AI_Chatbot.py          # Multi-model chatbot
+│   ├── 2_📊_Diagram_Generator.py   # AI-powered diagram creator
+│   └── 3_🎭_Personality_Bot.py     # Chat with AI personalities
+├── requirements.txt
+├── Dockerfile
+└── .streamlit/config.toml
 ```
 
-## Local Development
+## Coming Soon
 
-1. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+- 🔊 Speech Recognition
+- 📝 Document Summarizer
+- 🌐 Language Translator
+- 📊 Data Analysis Tool
 
-2. Run the app:
-```bash
-streamlit run "0_🏠_Home.py"
-```
+---
 
-3. Open your browser to `http://localhost:8501`
-
-## Deployment
-
-### Hugging Face Spaces
-
-This app is configured to run on Hugging Face Spaces using Docker. The Dockerfile is pre-configured for optimal deployment.
-
-### Streamlit Cloud
-
-1. Push your code to GitHub
-2. Connect your GitHub repo to [Streamlit Cloud](https://streamlit.io/cloud)
-3. Deploy with one click
-
-### Docker Deployment
-
-Build and run the Docker container:
-```bash
-docker build -t ai-toy-apps .
-docker run -p 8501:8501 ai-toy-apps
-```
-
-## Adding New Apps
-
-To add a new AI toy app:
-1. Create a new Python file in the `pages/` directory
-2. Follow the naming convention: `[number]_[emoji]_[PageName].py`
-3. The page will automatically appear in the sidebar navigation
-
-Example:
-```python
-# pages/3_🔮_Future_Predictor.py
-import streamlit as st
-
-st.set_page_config(page_title="Future Predictor", page_icon="🔮")
-st.title("🔮 Future Predictor")
-# Your app code here
-```
+Made with ❤️ by Shah | Powered by AI
