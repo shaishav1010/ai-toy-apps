@@ -46,7 +46,7 @@ st.markdown("---")
 
 st.header("🎯 Explore Our AI Apps")
 
-col1, col2, col3 = st.columns(3)
+col1, col2 = st.columns(2)
 
 with col1:
     st.markdown("""
@@ -58,7 +58,6 @@ with col1:
     - Multiple AI models (DeepSeek, Gemini, Claude)
     - Streaming responses
     - Conversation history
-    - Clean, intuitive interface
 
     *Perfect for Q&A, brainstorming, and creative tasks*
     """)
@@ -71,14 +70,15 @@ with col2:
     Transform ideas into professional diagrams!
 
     **Create:**
-    - Architecture diagrams
-    - Sequence diagrams
+    - Architecture & sequence diagrams
     - Flowcharts & ERDs
     - Class diagrams
 
     *Describe in plain English, get Mermaid diagrams*
     """)
     st.page_link("pages/2_📊_Diagram_Generator.py", label="Launch Diagram Generator →", icon="📊")
+
+col3, col4 = st.columns(2)
 
 with col3:
     st.markdown("""
@@ -87,15 +87,29 @@ with col3:
     Chat with AI that has character!
 
     **5 Personalities:**
-    - 🎩 Business Professional
-    - ✨ Creative Writer
-    - 💻 Technical Expert
-    - 🤗 Friendly Companion
+    - 🎩 Business Pro • ✨ Creative Writer
+    - 💻 Tech Expert • 🤗 Friendly Companion
     - 🎓 Academic Scholar
 
     *Each adapts style & expertise to your needs*
     """)
     st.page_link("pages/3_🎭_Personality_Bot.py", label="Launch Personality Bot →", icon="🎭")
+
+with col4:
+    st.markdown("""
+    ### 🌐 AI Translator
+
+    Intelligent translation with context!
+
+    **Features:**
+    - Auto language detection
+    - 20+ languages supported
+    - Cultural notes & idioms
+    - Alternative translations
+
+    *More than translation - understand the culture*
+    """)
+    st.page_link("pages/4_🌐_Translator.py", label="Launch Translator →", icon="🌐")
 
 st.markdown("---")
 
@@ -104,11 +118,10 @@ st.header("🚀 Coming Soon")
 upcoming_features = [
     ("🔊 Speech Recognition", "Convert speech to text with AI"),
     ("📝 Document Summarizer", "Get key insights from long documents"),
-    ("🌐 Language Translator", "Translate between 100+ languages"),
     ("📊 Data Analysis Tool", "Upload CSV & get AI-powered insights"),
 ]
 
-cols = st.columns(4)
+cols = st.columns(3)
 for i, (feature, desc) in enumerate(upcoming_features):
     with cols[i]:
         st.info(f"**{feature}**\n\n{desc}")

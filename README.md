@@ -33,6 +33,14 @@ Experience AI with character! Choose from 5 distinct personalities:
 
 Each personality adapts its communication style, expertise, and responses to match your needs.
 
+### 🌐 AI Translator
+More than just translation - understand the culture! Features:
+- **Auto Language Detection**: Type in any language, AI figures it out
+- **20+ Languages**: From English to Japanese, Arabic to Vietnamese
+- **Cultural Context**: Understand idioms, expressions, and regional variations
+- **Alternative Translations**: See multiple ways to express the same idea
+- **Confidence Scoring**: Know how reliable each translation is
+
 ## Tech Stack
 
 - **Frontend**: Streamlit
@@ -76,7 +84,8 @@ ai-toy-apps/
 ├── pages/
 │   ├── 1_🤖_AI_Chatbot.py          # Multi-model chatbot
 │   ├── 2_📊_Diagram_Generator.py   # AI-powered diagram creator
-│   └── 3_🎭_Personality_Bot.py     # Chat with AI personalities
+│   ├── 3_🎭_Personality_Bot.py     # Chat with AI personalities
+│   └── 4_🌐_Translator.py          # Intelligent translator
 ├── requirements.txt
 ├── Dockerfile
 └── .streamlit/config.toml
@@ -86,7 +95,6 @@ ai-toy-apps/
 
 - 🔊 Speech Recognition
 - 📝 Document Summarizer
-- 🌐 Language Translator
 - 📊 Data Analysis Tool
 
 ---
