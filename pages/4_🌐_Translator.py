@@ -101,17 +101,6 @@ with st.sidebar:
 
     st.markdown("---")
 
-    # Target language selection
-    st.subheader("🎯 Target Language")
-    target_language = st.selectbox(
-        "Translate to:",
-        options=list(LANGUAGES.keys()),
-        index=0,  # Default to English
-        help="Select the language you want to translate to"
-    )
-
-    st.markdown("---")
-
     # Clear history button
     if st.button("🗑️ Clear History", use_container_width=True):
         st.session_state.translation_history = []
@@ -160,7 +149,13 @@ with col1:
     translate_btn = st.button("🌐 Translate", type="primary", use_container_width=True)
 
 with col2:
-    st.subheader(f"🎯 Translation → {target_language}")
+    st.subheader("🎯 Translation")
+    target_language = st.selectbox(
+        "Translate to:",
+        options=list(LANGUAGES.keys()),
+        index=0,  # Default to English
+        help="Select the language you want to translate to"
+    )
     result_container = st.container()
 
 # Process translation
